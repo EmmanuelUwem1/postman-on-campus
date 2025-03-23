@@ -59,6 +59,6 @@ const EventDetails = ({ params }: EventDetailsProps) => {
 };
 
 
-};
+
 
 export default EventDetails;
