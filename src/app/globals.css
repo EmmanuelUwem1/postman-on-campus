@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+@import "tailwindcss";
+
+*{
+  outline:none;
+}
+body {
+  background: #FFFFFF;
+  color: #2D2D2D;
+ font-family: "Darker Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.shadow-box{
+  position: relative;
+}
+.shadow-box::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  right: -4px;
+  bottom: -5px;
+  z-index: -1;
+
+}
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+.white{
+  stroke: #FFFFFF;
+   fill: none;
+
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: #4A4A4A;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+/* Existing styles... */
+
+.cta-button-pri {
+  position: relative;
+border: 2px solid black;
+color: #F8F8F8;
+  overflow: hidden;
+  background-color: #000000;
+  /* transition: color 0.5s ease; */
+  z-index: 1;
+}
+
+.cta-button-pri::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.cta-button-pri:hover {
+  color: #2D2D2D;
+  /* background: transparent; */
+}
+
+.cta-button-pri:hover::before {
+  transform: translate(-50%, -50%) scaleX(1);
+}
+
+
+/* secondary cta */
+
+.cta-button-sec {
+  position: relative;
+border: 2px solid #FF6C37;
+color: #F8F8F8;
+  overflow: hidden;
+  background-color: #FF6C37;
+  /* transition: color 0.5s ease; */
+  z-index: 1;
+}
+
+.cta-button-sec::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.cta-button-sec:hover {
+  color: #2D2D2D;
+  /* background: transparent; */
+}
+
+.cta-button-sec:hover::before {
+  transform: translate(-50%, -50%) scaleX(1);
+}
+.navlink{
+  position: relative !important;
+  /* overflow: hidden; */
+  z-index: 1;
+  transition: all .4s ease;
+  border: 1px solid transparent;
+  border-radius: 99999px;
+  
+}
+.navlink:hover, .navlink.active {
+  background-color: #FF6C37;
+  color: #F8F8F8;
+}
+.navlink:hover, .navlink.custom {
+  background-color: #F8F8F8;
+  color: #FF6C37;
+}
+.navlink:hover::before {
+  /* transform: scaleX(1); */
+}
+.navlink.active::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000000;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  bottom: -6px;
+  z-index: -1;
+}
+.navlink.custom::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #F8F8F8;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  bottom: -6px;
+  z-index: -1;
+}
