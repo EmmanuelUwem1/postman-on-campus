@@ -1,7 +1,8 @@
+"use client"
 import Events from "@/components/Events";
 import Link from "next/link";
 import EventCard from "@/components/eventCard";
-import { GetServerSideProps } from "next";
+
 
 interface EventDetailsProps {
   params: {
@@ -57,16 +58,7 @@ const EventDetails = ({ params }: EventDetailsProps) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { id } = context.params as { id: string };
 
-  return {
-    props: {
-      params: {
-        id,
-      },
-    },
-  };
 };
 
 export default EventDetails;
