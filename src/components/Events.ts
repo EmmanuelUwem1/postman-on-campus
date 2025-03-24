@@ -1,6 +1,6 @@
 
 export interface EventCardProps {
-  id: number;
+  id: string;
   title: string;
   date: string;
   time: string;
@@ -12,7 +12,7 @@ export interface EventCardProps {
 }
 export const Events = [
   {
-    id: 1,
+    id: "Build",
     title: "Build the Future: Postman Campus Hackathon",
     date: "Nov 10-12, 2025",
     time: "3:00 PM - 5:00 PM",
@@ -22,7 +22,7 @@ export const Events = [
     platformLink: "https://zoom.us/j/1234567890",
   },
   {
-    id: 2,
+    id: "Basics",
     title: "API Basics: Getting Started with Postman",
     date: "October 15, 2025",
     time: "3:00 PM - 5:00 PM",
@@ -31,7 +31,7 @@ export const Events = [
     platformLink: "https://meet.google.com/abc-defg-hij",
   },
   {
-    id: 3,
+    id: "Integrating",
     title: "Integrating Postman into Your Curriculum",
     date: "October 20, 2025",
     time: "2:00 PM - 3:30 PM",
@@ -41,7 +41,7 @@ export const Events = [
     platformLink: "https://zoom.us/j/0987654321",
   },
   {
-    id: 4,
+    id: "API",
     title: "API Integration with GitHub",
     date: "2025-05-10",
     time: "1:00 PM",
@@ -51,7 +51,7 @@ export const Events = [
     platformLink: "https://meet.google.com/xyz-uvw-123",
   },
   {
-    id: 5,
+    id: "Automation",
     title: "Postman Automation",
     date: "2025-05-15",
     time: "3:00 PM",

@@ -2,21 +2,22 @@ import Events from "@/components/Events";
 import Link from "next/link";
 import EventCard from "@/components/eventCard";
 
-interface EventDetailsProps {
-  params: {
-    id: string;
-  };
-}
 
-const EventDetails = ({ params }: EventDetailsProps) => {
-  const id = params.id;
 
-  const event = Events.find((event) => event.id === Number(id));
+export default async function EventDetailsPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const id = await params;
+
+  const event = Events.find((event) => String(event.id) === String(id.id));
 
   if (!event) {
     return (
-      <div className="h-full w-full flex justify-center items-center">
-        <p className="my-14 text-xl">Event not found</p>
+      <div className="h-full min-h-80 w-full flex justify-center items-center">
+        <p className="my-14 text-2xl">Event not found {event} </p>
+        <p>{id.id}</p>
       </div>
     );
   }
@@ -31,8 +32,8 @@ const EventDetails = ({ params }: EventDetailsProps) => {
           <Link href={"/events"} className="hover:underline">
             /Events
           </Link>
-          <Link href={`/events/${id}`} className="hover:underline">
-            /{id}
+          <Link href={`/events/${id.id}`} className="hover:underline">
+            /{event.id}
           </Link>
         </span>
         <Link
@@ -56,27 +57,6 @@ const EventDetails = ({ params }: EventDetailsProps) => {
   );
 };
 
-export async function generateStaticParams() {
-  const events = Events.map((event) => ({
-    id: event.id.toString(),
-  }));
 
-  return events;
-}
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const event = Events.find((event) => event.id === Number(params.id));
 
-  if (!event) {
-    return {
-      title: "Event not found",
-    };
-  }
-
-  return {
-    title: event.title,
-    description: event.description,
-  };
-}
-
-export default EventDetails;
