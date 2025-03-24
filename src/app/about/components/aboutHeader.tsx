@@ -8,7 +8,7 @@ import HamburgerMenu from "@/components/hamburger-menu";
 function AboutHeader() {
   const [navLinks] = useState([
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
+    { name: "About Postman", path: "/about" },
     { name: "Events", path: "/events" },
     { name: "Resources", path: "/resources" },
     { name: "Contact Us", path: "/contact" },
@@ -57,6 +57,7 @@ function AboutHeader() {
             objectPosition="center"
             priority
           />
+          <span className="text-lg my-2 block">Student Community, UNIUYO</span>
         </Link>
         <nav className="hidden md:flex gap-4">
           {navLinks.map((link) => (

@@ -37,7 +37,7 @@ function Aboutpage() {
             }`}
           >
             <h2 className="font-extrabold text-3xl md:text-4xl lg:text-6xl">
-              About Us
+              About Postman
             </h2>
             <h3 className="font-normal text-4xl md:text-6xl lg:text-7xl pt-3 leading-20">
               Empowering the Next Generation of API Innovators
@@ -55,9 +55,9 @@ function Aboutpage() {
             ></Image>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row self-center justify-center items-center gap-6 w-full md:w-[80%] my-12">
+        <div className="flex flex-col md:flex-row self-center justify-center items-center gap-20 w-full md:w-[80%] my-12">
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold w-full md:w-[30%]">
-            Who We Are
+            Who Postman Is
           </h1>
           <div className="flex flex-col justify-start items-start w-full md:w-[60%]">
             <h2 className="font-bold text-2xl md:text-3xl">
@@ -65,10 +65,10 @@ function Aboutpage() {
               developers, educators, and students shaping the future of APIs.
             </h2>
             <p className="font-medium text-lg md:text-xl">
-              At Postman, we believe in the power of collaboration and
+              Postman, there is a believe in the power of collaboration and
               innovation. Our mission is to simplify API development and make it
-              accessible to everyone, from beginners to experts. Through Postman
-              on Campus, we’re dedicated to empowering students and educators
+              accessible to everyone, from beginners to experts. Through the Postman 
+              Student Expert Program, they empower students and educators
               with the tools, resources, and knowledge they need to succeed in
               the world of APIs and beyond.
             </p>
@@ -96,9 +96,7 @@ function Aboutpage() {
           <h3 className="font-extrabold text-4xl md:text-6xl">
             Join a Global Network of Learners and Innovators
           </h3>
-          <p className="font-extrabold text-lg md:text-xl">
-            Postman on Campus is more than just a program—it’s a community.
-          </p>
+        
           <Link
             href={"/"}
             className="bg-[#000000] cta-button-pri text-[#F8F8F8] font-semibold text-lg md:text-2xl px-6 py-3 rounded-lg flex w-fit items-center justify-center"
@@ -124,7 +122,7 @@ function Aboutpage() {
             ></Image>
           </div>
           <span className="text-lg md:text-2xl font-semibold w-full md:w-1/2">
-            We’re committed to helping students and educators thrive in the
+            Postman is committed to helping students and educators thrive in the
             fast-evolving world of technology. By providing free tools,
             resources, and a supportive community, we aim to:
             <ul className="list-disc pl-8">

@@ -29,7 +29,7 @@ function EventPage() {
             href={"/"}
             className="bg-[#FF6C37] text-[#F8F8F8] font-semibold text-base px-6 py-3 rounded-lg flex w-full items-center justify-center"
           >
-            Learn More
+            Register Now
           </Link>
         </div>
       </div>

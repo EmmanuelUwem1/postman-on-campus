@@ -8,7 +8,7 @@ import HamburgerMenu from "./hamburger-menu";
 function Header() {
   const [navLinks] = useState([
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
+    { name: "About Postman", path: "/about" },
     { name: "Events", path: "/events" },
     { name: "Resources", path: "/resources" },
     { name: "Contact Us", path: "/contact" },
@@ -23,17 +23,18 @@ function Header() {
   return (
     <header className="px-4 md:px-24 pt-4 fixed top-0 left-0 bg-white z-[1000] w-full">
       <div className="border-b h-16 sm:h-24 pt-5 pb-4 border-b-[#E9ECEF] flex justify-between items-center">
-        <Link href={"/"} className="relative">
+        <Link href={"https://postman.com"} rel="noreferrer" target="_blank" className="relative">
           <Image
             src="/Postman-logo-orange-2021 1.svg"
             alt="Postman Logo"
-            width={1580}
-            height={490}
+            width={1200}
+            height={200}
             objectFit="contain"
             objectPosition="center"
             layout="responsive"
             priority={true}
           ></Image>
+          <span className="text-lg my-2 block">Student Community, UNIUYO</span>
         </Link>
         <nav className="hidden md:flex gap-4">
           {navLinks.map((link) => (

@@ -16,7 +16,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-around items-start gap-4 w-full">
           <div className="flex flex-col gap-4 items-start justify-start">
             <Link
-              href={"/about"}
+              href={"https://postman.com"}
               className="text-[#FFFFFF] font-medium text-lg hover:opacity-70"
             >
               About Postman
@@ -27,14 +27,14 @@ function Footer() {
             >
               Campus Resources
             </Link>
-            <Link
+            {/* <Link
               href={"/about"}
               className="text-[#FFFFFF] font-medium text-lg hover:opacity-70"
             >
               Documentation
-            </Link>
+            </Link> */}
             <Link
-              href={"/about"}
+              href={"/contact"}
               className="text-[#FFFFFF] font-medium text-lg hover:opacity-70"
             >
               Support
@@ -45,7 +45,7 @@ function Footer() {
               Socials
             </h3>
             <div className="flex gap-3">
-              <Link href={"/"} className="relative">
+              <Link href={"https://www.linkedin.com/showcase/pscuniuyo"} className="relative">
                 <Image
                   src={"/linkedin.svg"}
                   alt="LinkedIn"
@@ -53,23 +53,23 @@ function Footer() {
                   width={32}
                 ></Image>
               </Link>
-              <Link href={"/"} className="relative">
+              {/* <Link href={"/"} className="relative">
                 <Image
                   src={"/instagram.svg"}
                   alt="Instagram"
                   height={32}
                   width={32}
                 ></Image>
-              </Link>
-              <Link href={"/"} className="relative">
+              </Link> */}
+              {/* <Link href={"/"} className="relative">
                 <Image
                   src={"/github.svg"}
                   alt="GitHub"
                   height={32}
                   width={32}
                 ></Image>
-              </Link>
-              <Link href={"/"} className="relative">
+              </Link> */}
+              <Link href={"https://x.com/pscuniuyo"} className="relative">
                 <Image
                   src={"/Subtract.svg"}
                   alt="Twitter"
@@ -86,10 +86,10 @@ function Footer() {
             <span className="text-[#FFFFFF] font-medium text-lg">
               Reach out to us at{" "}
               <a
-                href="mailto:campus@postman.com"
+                href="mailto:hello@pscuniuyo.org"
                 className="text-[#FFFFFF] font-medium text-lg hover:opacity-70"
               >
-                campus@postman.com
+                hello@pscuniuyo.org
               </a>
             </span>
           </div>

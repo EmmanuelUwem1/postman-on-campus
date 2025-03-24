@@ -63,7 +63,10 @@ export default function Home() {
                 animate={{ width: "100%" }}
                 transition={{duration: 2, delay:.5}}
                 className="text-[#FF6C37] text-4xl md:text-6xl lg:text-8xl font-semibold overflow-hidden">
+                  <Link href={"https://postman.com"}>
                 Postman
+
+                  </Link>
               </motion.span>
             </p>
           </div>
@@ -74,24 +77,24 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap justify-center items-center gap-4">
             <Link
-              href={"/"}
+              href={"https://chat.whatsapp.com/CpY15kWfa6N99YLfu7GObm"}
               className=" font-semibold text-lg md:text-2xl cta-button-pri px-6 py-3 rounded-lg flex w-fit items-center justify-center"
             >
-              Get started for free
+              Join the community
             </Link>
 
             <Link
-              href={"/"}
+              href={"/resources"}
               className="bg-[#FF6C37] cta-button-sec text-[#F8F8F8] font-semibold text-lg md:text-2xl px-6 py-3 rounded-lg flex w-fit items-center justify-center "
             >
-              Explore campus resources
+              Explore relevant resources
             </Link>
           </div>
           <div className="relative flex w-full md:w-[70%] justify-center items-center">
             <Image
               alt="hero illustration"
               src={
-                "/instructor_26fp2261340y1ukokimvca8su_public_1654279171_Screen+Shot+2022-06-03+at+1.58.53+PM.1654279171498 1.svg"
+                "/instructor.svg"
               }
               objectFit="contain"
               objectPosition="center"
@@ -153,9 +156,9 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col justify-center items-center mx-4 md:mx-12 mt-18">
-        <h2 className="text-[#FF6C37] text-xl md:text-2xl font-bold">
+        {/* <h2 className="text-[#FF6C37] text-xl md:text-2xl font-bold">
           Features for Campus Users
-        </h2>
+        </h2> */}
         <h3 className="text-[#000000] text-2xl md:text-4xl font-normal py-3">
           Everything You Need to Succeed with APIs
         </h3>
@@ -200,7 +203,7 @@ export default function Home() {
         </div>
         <div className="flex gap-4 items-center justify-center my-8">
           <Link
-            href="/"
+            href="/events"
             className="bg-[#141414] cta-button-pri rounded-full py-4 px-20 text-[#FFFFFF] text-base font-semibold"
           >
             See More

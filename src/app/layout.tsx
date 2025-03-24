@@ -10,7 +10,7 @@ const darkerGrotesque = Darker_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Postman Campus",
+  title: "Postman Student Community, UNIUYO",
   description:
     "Join the global community of developers, educators, and students using Postman to streamline API development, testing, and collaboration.",
 };
