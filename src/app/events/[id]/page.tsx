@@ -1,3 +1,4 @@
+
 import Events from "@/components/Events";
 import Link from "next/link";
 import EventCard from "@/components/eventCard";
@@ -32,7 +33,7 @@ export default async function EventDetailsPage({
           <Link href={"/events"} className="hover:underline">
             /Events
           </Link>
-          <Link href={`/events/${id.id}`} className="hover:underline">
+          <Link href={`/events/${event.id}`} className="hover:underline">
             /{event.id}
           </Link>
         </span>
@@ -56,7 +57,4 @@ export default async function EventDetailsPage({
     </section>
   );
 };
-
-
-
 
