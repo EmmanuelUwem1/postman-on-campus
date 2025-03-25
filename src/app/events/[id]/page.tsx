@@ -48,6 +48,7 @@ export default async function EventDetailsPage({
         id={event.id}
         title={event.title}
         date={event.date}
+        image={event.image}
         description={event.description}
         platform={event.platform}
         platformLink={event.platformLink}

@@ -13,7 +13,9 @@ function Contactpage() {
     >
       <div className="flex flex-col md:flex-row gap-4 w-full">
         <div className="flex flex-col justify-start items-start w-full md:w-2/5">
-          <h2 className="font-medium text-xl md:text-2xl text-[#FF6C37]">Contact Us</h2>
+          <h2 className="font-medium text-xl md:text-2xl text-[#FF6C37]">
+            Contact Us
+          </h2>
           <h1 className="font-extrabold text-3xl md:text-5xl text-[#000000]">
             Choose the Best Way to Connect with Us
           </h1>
@@ -113,12 +115,12 @@ function Contactpage() {
               type="text"
               id="subject"
               name="subject"
-              placeholder=""
+              placeholder="Enter the summary of your question or topic"
               className="border border-[#E9ECEF] rounded-[8px] py-2 px-4 mt-1 w-full focus:border-[#FF6C37]"
               required
             />
             <p className="text-sm text-[#4A4A4A] mt-1">
-              Please provide the subject of your message
+              Briefly summarize your question or topic
             </p>
           </div>
 
@@ -132,15 +134,17 @@ function Contactpage() {
               </label>
               <select
                 id="category"
-                              name="category"
-                              
+                name="category"
                 className="border border-[#E9ECEF] rounded-[8px] p-2 mt-1 w-full md:w-80 shadow-sm focus:border-[#FF6C37]"
                 required
               >
-                <option value="">Select a category</option>
+                <option value="">--What bests describes your inquiry--</option>
                 <option value="general">General Inquiry</option>
-                <option value="support">Support</option>
-                <option value="feedback">Feedback</option>
+                <option value="events">Campus Events</option>
+                <option value="support">Technical Support</option>
+                <option value="ambassador">Campus Ambassador Program</option>
+                <option value="feedback">Feedback/Suggestions</option>
+                <option value="other">Other</option>
               </select>
             </div>
             <div className="flex flex-col w-full">
@@ -175,6 +179,7 @@ function Contactpage() {
               id="message"
               name="message"
               title="message"
+              placeholder="Type your message here..."
               rows={4}
               className="border border-[#E9ECEF] rounded-[8px] p-2 mt-1 w-full focus:border-[#FF6C37]"
               required
@@ -190,7 +195,8 @@ function Contactpage() {
               required
             />
             <label htmlFor="agreement" className="ml-2 text-sm">
-              I agree to receive responses from Postman on Campus - Uniuyo
+              I agree to receive responses from Postman Student Community -
+              UNIUYO
             </label>
           </div>
 

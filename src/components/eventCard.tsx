@@ -7,6 +7,7 @@ function EventCard({
   title,
   date,
   time,
+  image,
   description,
   platform,
   showDescription,
@@ -68,16 +69,17 @@ function EventCard({
                 ></Image>
               </Link>
             </div>
-            <div className="relative flex items-center justify-center w-full py-4">
-              <Image
-                alt=""
-                src={"/image_fx_-96 1.svg"}
-                height={554}
-                width={788}
-                objectFit="contain"
-                objectPosition="center"
-                layout="responsive"
-              ></Image>
+            <div className="relative flex items-center justify-center w-full h-60 my-4 overflow-hidden">
+              {image && (
+                <Image
+                  src={image}
+                  alt={title}
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                  // className="rounded-[7px]"
+                />
+              )}
             </div>
             <h2 className="font-extrabold text-2xl md:text-4xl">Description</h2>
             <p className="my-4 text-left text-lg md:text-2xl font-semibold">
@@ -94,9 +96,20 @@ function EventCard({
       ) : (
         <Link
           href={`/events/${id}`}
-          className="flex flex-col justify-start items-center h-96 w-full lg:w-80 p-4 rounded-xl hover:shadow-lg transition-all relative"
+          className="flex flex-col justify-start items-center h-96 w-full lg:w-80 p-4 rounded-xl hover:shadow-lg transition-all relative overflow-hidden"
         >
-          <span className="relative w-full h-44 bg-[#FF6C37] rounded-[7px]"></span>
+          <span className="relative w-full h-44 bg-[#FF6C37] rounded-[7px]">
+            {image && (
+              <Image
+                src={image}
+                alt={title}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+                className="rounded-[7px]"
+              />
+            )}
+          </span>
           <h2 className="text-2xl font-bold py-3 self-start">{title}</h2>
           <p className="text-[#757575] text-base font-semibold flex justify-between w-full gap-2">
             <span className="">{date}</span>

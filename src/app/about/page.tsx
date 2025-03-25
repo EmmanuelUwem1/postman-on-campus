@@ -55,9 +55,9 @@ function Aboutpage() {
             ></Image>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row self-center justify-center items-center gap-20 w-full md:w-[80%] my-12">
+        <div className="flex flex-col md:flex-row self-center justify-center items-center gap-10 md:gap-20 w-full md:w-[80%] my-12">
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold w-full md:w-[30%]">
-            Who Postman Is
+            What Postman Is
           </h1>
           <div className="flex flex-col justify-start items-start w-full md:w-[60%]">
             <h2 className="font-bold text-2xl md:text-3xl">

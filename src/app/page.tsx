@@ -7,7 +7,7 @@ import BePart from "@/components/bePart";
 import BenefitsCard from "@/components/benefitsCard";
 import { motion } from "framer-motion";
 import Footer from "@/components/footer";
-
+import Typewriter from "typewriter-effect";
 export default function Home() {
   const featuresData = [
     {
@@ -40,14 +40,25 @@ export default function Home() {
       <section className="flex flex-col w-full py-20">
         <div className="flex flex-col items-center justify-center gap-4">
           <div className="flex flex-col items-center justify-center">
-            <p className="font-normal text-4xl md:text-6xl lg:text-8xl text-[#4A4A4A] text-center">
-              Empowering Campus Life
-            </p>
-            <p className="relative flex items-center justify-center gap-2">
-              <span className="font-normal text-4xl md:text-6xl lg:text-8xl text-[#4A4A4A]">
+            <div className="font-normal text-4xl md:text-6xl lg:text-8xl text-[#4A4A4A] text-center">
+              <Typewriter
+                options={{
+                  strings: [
+                    "Empowering Campus Life with",
+                    "Creating Seamless Integrations with",
+                    "Fostering API Education with",
+                    "Driving API Excellence with",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
+            <div className="relative flex items-center justify-center gap-2">
+              {/* <span className="font-normal text-4xl md:text-6xl lg:text-8xl text-[#4A4A4A]">
                 with
-              </span>
-              <span className="flex items-baseline justify-center relative h-full w-fit">
+              </span> */}
+              {/* <span className="flex items-baseline justify-center relative h-full w-fit">
                 <Image
                   alt=""
                   src={"/Vector 1.svg"}
@@ -57,18 +68,16 @@ export default function Home() {
                   width={1.5}
                   objectPosition="center"
                 ></Image>
-              </span>
+              </span> */}
               <motion.span
-                initial={{width: "0%"}}
-                animate={{ width: "100%" }}
-                transition={{duration: 2, delay:.5}}
-                className="text-[#FF6C37] text-4xl md:text-6xl lg:text-8xl font-semibold overflow-hidden">
-                  <Link href={"https://postman.com"}>
-                Postman
-
-                  </Link>
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2, delay: 0.5 }}
+                className="text-[#FF6C37] text-4xl md:text-6xl lg:text-8xl font-semibold overflow-hidden"
+              >
+                <Link href={"https://postman.com"}>Postman</Link>
               </motion.span>
-            </p>
+            </div>
           </div>
           <div className="font-normal text-[#2D2D2D] text-xl md:text-2xl lg:text-3xl w-[90%] md:w-[75%] text-center">
             Join the global community of developers, educators, and students
@@ -93,9 +102,7 @@ export default function Home() {
           <div className="relative flex w-full md:w-[70%] justify-center items-center">
             <Image
               alt="hero illustration"
-              src={
-                "/instructor.svg"
-              }
+              src={"/instructor.svg"}
               objectFit="contain"
               objectPosition="center"
               layout="responsive"
@@ -119,7 +126,7 @@ export default function Home() {
 
       <section className="flex flex-col justify-center items-center mx-4 md:mx-24 my-14">
         <h2 className="text-[#FF6C37] text-xl md:text-2xl font-bold self-start">
-          Why Postman on Campus?
+          Why The Postman Student Community ?
         </h2>
         <div className="flex flex-wrap w-full">
           <div className="flex flex-col w-full md:w-1/2 gap-4 mt-6">
@@ -171,7 +178,7 @@ export default function Home() {
               <h4 className="text-[#000000] text-xl md:text-2xl font-semibold">
                 {feature.title}
               </h4>
-              <p className="text-[#2D2D2D] text-base md:text-lg text-center">
+              <p className="text-[#2D2D2D] text-lg md:text-lg text-center">
                 {feature.description}
               </p>
             </div>
@@ -193,6 +200,7 @@ export default function Home() {
               id={event.id}
               title={event.title}
               date={event.date}
+              image={event.image}
               time={event.time}
               description={event.description}
               platform={event.platform}

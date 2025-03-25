@@ -45,7 +45,10 @@ function Footer() {
               Socials
             </h3>
             <div className="flex gap-3">
-              <Link href={"https://www.linkedin.com/showcase/pscuniuyo"} className="relative">
+              <Link
+                href={"https://www.linkedin.com/showcase/pscuniuyo"}
+                className="relative"
+              >
                 <Image
                   src={"/linkedin.svg"}
                   alt="LinkedIn"
@@ -97,7 +100,7 @@ function Footer() {
       </div>
       <div className="flex flex-col md:flex-row justify-between items-center py-5 w-full">
         <Link
-          href={"/"}
+          href={"https://www.postman.com/downloads/"}
           className="text-[#FF6C37] font-medium text-lg md:text-2xl"
         >
           Download Postman

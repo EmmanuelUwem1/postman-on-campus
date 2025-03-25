@@ -21,20 +21,29 @@ function Header() {
   };
 
   return (
-    <header className="px-4 md:px-24 pt-4 fixed top-0 left-0 bg-white z-[1000] w-full">
+    <header className="px-4 md:px-4 lg:px-24 pt-4 fixed top-0 left-0 bg-white z-[1000] w-full">
       <div className="border-b h-16 sm:h-24 pt-5 pb-4 border-b-[#E9ECEF] flex justify-between items-center">
-        <Link href={"https://postman.com"} rel="noreferrer" target="_blank" className="relative">
+        <Link
+          href={"https://postman.com"}
+          rel="noreferrer"
+          target="_blank"
+          className="relative pt-2"
+        >
           <Image
             src="/Postman-logo-orange-2021 1.svg"
             alt="Postman Logo"
-            width={1200}
-            height={200}
+            width={158}
+            height={49}
             objectFit="contain"
             objectPosition="center"
+           
+            
             layout="responsive"
             priority={true}
           ></Image>
-          <span className="text-lg my-2 block">Student Community, UNIUYO</span>
+          <span className="text-lg my-2 -top-4 relative block opacity-80">
+            Student Community, UNIUYO
+          </span>
         </Link>
         <nav className="hidden md:flex gap-4">
           {navLinks.map((link) => (

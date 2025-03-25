@@ -3,6 +3,7 @@ import Events from "@/components/Events";
 import EventCard from "@/components/eventCard";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 function EventPage() {
   const headEvent = Events[0];
@@ -15,7 +16,16 @@ function EventPage() {
     >
       <div className="flex flex-col md:flex-row gap-6 py-8 border-b border-[#E9ECEF] w-full">
         <span className="relative bg-[#FF6C37] rounded-[7px] h-72 w-full md:w-1/2">
-          {/* {Events?.at(0)?.image ? (<Image alt="" src={Events.at(0)?.image}></Image>) : "" } */}
+         
+                         <Image
+                           src={headEvent.image}
+                           alt={headEvent.title}
+                           layout="fill"
+                           objectFit="cover"
+                           objectPosition="center"
+                           // className="rounded-[7px]"
+                         />
+                       
         </span>
         <div className="flex flex-col justify-center items-start gap-6 w-full md:w-[65%]">
           <h1 className="font-semibold text-3xl md:text-6xl text-[#2D2D2D]">
@@ -40,6 +50,7 @@ function EventPage() {
             key={event.id}
             id={event.id}
             title={event.title}
+            image={event.image}
             date={event.date}
             time={event.time}
             description={event.description}

@@ -43,7 +43,7 @@ function AboutHeader() {
       }`}
     >
       <div className="border-b h-16 sm:h-24 pt-5 pb-4 border-b-[#E9ECEF] flex justify-between items-center">
-        <Link href={"/"} className="relative">
+        <Link href={"/"} className="relative pt-2">
           <Image
             src={`${
               isScrolled
@@ -57,7 +57,7 @@ function AboutHeader() {
             objectPosition="center"
             priority
           />
-          <span className="text-lg my-2 block">Student Community, UNIUYO</span>
+          <span className="text-lg my-2 block relative -top-4">Student Community, UNIUYO</span>
         </Link>
         <nav className="hidden md:flex gap-4">
           {navLinks.map((link) => (
