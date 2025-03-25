@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Postman Campus - Contact",
+  title: "Contact - Postman Student Community",
   description:
     "Get in touch with Postman Campus. Whether you have questions, need support, or want to collaborate, our team is here to help. Connect with us through various channels and join our community of developers, educators, and students.",
 };

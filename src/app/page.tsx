@@ -55,20 +55,7 @@ export default function Home() {
               />
             </div>
             <div className="relative flex items-center justify-center gap-2">
-              {/* <span className="font-normal text-4xl md:text-6xl lg:text-8xl text-[#4A4A4A]">
-                with
-              </span> */}
-              {/* <span className="flex items-baseline justify-center relative h-full w-fit">
-                <Image
-                  alt=""
-                  src={"/Vector 1.svg"}
-                  objectFit="contain"
-                  layout="responsive"
-                  height={70}
-                  width={1.5}
-                  objectPosition="center"
-                ></Image>
-              </span> */}
+             
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
