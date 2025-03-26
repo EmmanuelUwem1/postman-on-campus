@@ -1,14 +1,13 @@
-'use client'
+
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import PageTransitionAnimation from "@/components/pageTransitionAnimation";
 
 function Contactpage() {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+    <PageTransitionAnimation type="fadeIn">
+    <section
+   
       className="flex flex-col justify-start items-center mx-4 md:mx-24 my-14"
     >
       <div className="flex flex-col md:flex-row gap-4 w-full">
@@ -219,7 +218,8 @@ function Contactpage() {
           ></Image>
         </span>
       </div>
-    </motion.section>
+      </section>
+      </PageTransitionAnimation>
   );
 }
 

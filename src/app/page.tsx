@@ -1,13 +1,13 @@
-"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import EventCard from "@/components/eventCard";
 import Events from "@/components/Events";
 import BePart from "@/components/bePart";
 import BenefitsCard from "@/components/benefitsCard";
-import { motion } from "framer-motion";
 import Footer from "@/components/footer";
-import Typewriter from "typewriter-effect";
+import HeroAnimation from "@/components/HeroAnimation";
+import PageTransitionAnimation from "@/components/pageTransitionAnimation";
 export default function Home() {
   const featuresData = [
     {
@@ -32,40 +32,10 @@ export default function Home() {
     },
   ];
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <PageTransitionAnimation type="fadeIn">
       <section className="flex flex-col w-full py-20">
         <div className="flex flex-col items-center justify-center gap-4">
-          <div className="flex flex-col items-center justify-center">
-            <div className="font-normal text-4xl md:text-6xl lg:text-8xl text-[#4A4A4A] text-center">
-              <Typewriter
-                options={{
-                  strings: [
-                    "Empowering Campus Life with",
-                    "Creating Seamless Integrations with",
-                    "Fostering API Education with",
-                    "Driving API Excellence with",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            </div>
-            <div className="relative flex items-center justify-center gap-2">
-             
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 2, delay: 0.5 }}
-                className="text-[#FF6C37] text-4xl md:text-6xl lg:text-8xl font-semibold overflow-hidden"
-              >
-                <Link href={"https://postman.com"}>Postman</Link>
-              </motion.span>
-            </div>
-          </div>
+          <HeroAnimation />
           <div className="font-normal text-[#2D2D2D] text-xl md:text-2xl lg:text-3xl w-[90%] md:w-[75%] text-center">
             Join the global community of developers, educators, and students
             using Postman to streamline API development, testing, and
@@ -160,7 +130,7 @@ export default function Home() {
           {featuresData.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col w-full md:w-1/3 lg:w-56 gap-2 items-center justify-start bg-[#FFE2D5] rounded-2xl pt-6 pb-3 px-4 border-[#FF6C37] border h-40"
+              className="flex flex-col w-full sm:w-1/3 lg:w-56 gap-2 items-center justify-start bg-[#FFE2D5] rounded-2xl pt-6 pb-3 px-4 border-[#FF6C37] border h-40"
             >
               <h4 className="text-[#000000] text-xl md:text-2xl font-semibold">
                 {feature.title}
@@ -180,7 +150,7 @@ export default function Home() {
         <h3 className="text-[#000000] text-2xl md:text-4xl font-normal py-3">
           Grow Your Skills, Expand Your Network, and Have Fun!
         </h3>
-        <div className="flex flex-wrap gap-4 items-center justify-center w-full my-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex-wrap lg:flex gap-4 items-center justify-center w-full my-8">
           {Events.slice(0, 3).map((event) => (
             <EventCard
               key={event.id}
@@ -208,6 +178,6 @@ export default function Home() {
 
       <BePart showSecondaryCTA={true} />
       <Footer />
-    </motion.div>
+    </PageTransitionAnimation>
   );
 }
