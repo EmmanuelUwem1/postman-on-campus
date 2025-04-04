@@ -42,22 +42,21 @@ function AboutHeader() {
         isScrolled ? "bg-white text-[#2D2D2D]" : "bg-[#FF6C37] text-white"
       }`}
     >
-      <div className="border-b h-16 sm:h-24 pt-5 pb-4 border-b-[#E9ECEF] flex justify-between items-center">
-        <Link href={"/"} className="relative pt-2">
+      <div className="border-b h-fit sm:h-24 border-b-[#E9ECEF] flex justify-between items-center">
+        <Link
+          href={"/"}
+          className="relative flex justify-start items-center w-52 h-20  sm:w-60 sm:h-full self-start"
+        >
           <Image
-            src={`${
-              isScrolled
-                ? "/Postman-logo-orange-2021 1.svg"
-                : "/Postman-logo-Variants.svg"
-            }`}
+            src={`${isScrolled ? "/psc logo.png" : "/psc logo white.png"}`}
             alt="Postman Logo"
-            width={158}
-            height={49}
+            className="sm:w-60 w-48 relative flex"
+            layout="fill"
             objectFit="contain"
-            objectPosition="center"
-            priority
+            objectPosition="left"
+            priority={true}
           />
-          <span className="text-lg my-2 block relative -top-4">Student Community, UNIUYO</span>
+         
         </Link>
         <nav className="hidden md:flex gap-4">
           {navLinks.map((link) => (

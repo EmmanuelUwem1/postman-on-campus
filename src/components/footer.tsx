@@ -5,12 +5,14 @@ function Footer() {
   return (
     <footer className="bg-[#121212] px-4 md:px-24 flex w-full flex-col items-start justify-start pt-14">
       <div className="flex flex-col md:flex-row justify-between gap-4 w-full items-start border-b-2 border-b-[#E9ECEF] pb-12">
-        <Link href={"/"} className="relative">
+        <Link href={"/"} className="relative w-80 h-20" >
           <Image
-            src="/Postman-logo-full-white-2021 1.svg"
+            src="/psc logo white.png"
             alt="Postman Logo"
-            width={229}
-            height={69}
+           
+            objectFit="contain"
+            objectPosition="left"
+            layout="fill"
           />
         </Link>
         <div className="flex flex-col md:flex-row justify-around items-start gap-4 w-full">

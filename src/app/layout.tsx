@@ -48,7 +48,7 @@ export default function RootLayout({
       </head>
       <body className={`${darkerGrotesque.variable} antialiased`}>
         <Header />
-        <main className="min-h-screen pt-20">{children}</main>
+        <main className="min-h-screen pt-20 overflow-x-hidden">{children}</main>
       
       </body>
     </html>

@@ -22,28 +22,23 @@ function Header() {
 
   return (
     <header className="px-4 md:px-4 lg:px-24 pt-4 fixed top-0 left-0 bg-white z-[1000] w-full">
-      <div className="border-b h-16 sm:h-24 pt-5 pb-4 border-b-[#E9ECEF] flex justify-between items-center">
+      <div className="border-b h-fit sm:h-24 border-b-[#E9ECEF] flex justify-between items-center">
         <Link
           href={"https://postman.com"}
           rel="noreferrer"
           target="_blank"
-          className="relative pt-2"
+          className="relative flex justify-start items-center w-52 h-20  sm:w-60 sm:h-full self-start"
         >
           <Image
-            src="/Postman-logo-orange-2021 1.svg"
+            src="/psc logo.png"
             alt="Postman Logo"
-            width={158}
-            height={49}
+            className="sm:w-60 w-48 relative flex"
+            layout="fill"
             objectFit="contain"
-            objectPosition="center"
-           
-            
-            layout="responsive"
+            objectPosition="left"
             priority={true}
           ></Image>
-          <span className="text-lg my-2 -top-4 relative block opacity-80">
-            Student Community, UNIUYO
-          </span>
+         
         </Link>
         <nav className="hidden md:flex gap-4">
           {navLinks.map((link) => (
