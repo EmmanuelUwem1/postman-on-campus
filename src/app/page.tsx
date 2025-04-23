@@ -44,14 +44,14 @@ export default function Home() {
           <div className="flex flex-wrap justify-center items-center gap-4">
             <Link
               href={"https://chat.whatsapp.com/CpY15kWfa6N99YLfu7GObm"}
-              className=" font-semibold text-lg md:text-2xl cta-button-pri px-6 py-3 rounded-lg flex w-fit items-center justify-center"
+              className=" font-semibold text-lg md:text-2xl cta-button-pri px-6 py-3 rounded-lg flex w-full sm:w-fit mx-4 sm:mx-0 items-center justify-center"
             >
               Join the community
             </Link>
 
             <Link
               href={"/resources"}
-              className="bg-[#FF6C37] cta-button-sec text-[#F8F8F8] font-semibold text-lg md:text-2xl px-6 py-3 rounded-lg flex w-fit items-center justify-center "
+              className="bg-[#FF6C37] cta-button-sec text-[#F8F8F8] font-semibold text-lg md:text-2xl px-6 py-3 rounded-lg flex w-full sm:w-fit mx-4 sm:mx-0 items-center justify-center "
             >
               Explore relevant resources
             </Link>

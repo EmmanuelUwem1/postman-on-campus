@@ -8,7 +8,7 @@ import Image from "next/image";
 function EventPage() {
   const headEvent = Events[0];
   return (
-    <PageTransitionAnimation type="fadeIn">
+    <PageTransitionAnimation type="slideLeft">
       <section className="flex flex-col justify-start items-center mx-4 md:mx-24 my-14">
         <div className="flex flex-col md:flex-row gap-6 py-8 border-b border-[#E9ECEF] w-full">
           <span className="relative bg-[#FF6C37] rounded-[7px] h-72 w-full md:w-1/2">

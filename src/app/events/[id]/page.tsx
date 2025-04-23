@@ -17,8 +17,8 @@ export default async function EventDetailsPage({
   if (!event) {
     return (
       <div className="h-full min-h-80 w-full flex justify-center items-center">
-        <p className="my-14 text-2xl">Event not found {event} </p>
-        <p>{id.id}</p>
+        <p className="my-14 text-2xl">Event {event} not found</p>
+        
       </div>
     );
   }
