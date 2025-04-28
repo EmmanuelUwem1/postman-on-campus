@@ -1,9 +1,6 @@
 
 # postman student community UNIUYO web
-
-
-![psc logo white](https://github.com/user-attachments/assets/4dd34a52-ce7d-4fe3-b8f9-0d959c4a20b6)
-
+![psc logo white](https://github.com/user-attachments/assets/d176c6e1-4bdd-4fcb-8fec-1ca5437d1b9c)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
