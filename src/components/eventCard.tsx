@@ -96,7 +96,7 @@ function EventCard({
       ) : (
         <Link
           href={`/events/${id}`}
-          className="flex flex-col justify-start items-center h-96 w-full lg:w-80 p-4 rounded-xl hover:shadow-lg transition-all relative overflow-hidden"
+          className="flex flex-col justify-start items-center h-96 p-4 rounded-xl hover:shadow-lg transition-all relative overflow-hidden"
         >
           <span className="relative w-full h-44 bg-[#FF6C37] rounded-[7px]">
             {image && (

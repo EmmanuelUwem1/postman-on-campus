@@ -193,3 +193,21 @@ color: #F8F8F8;
   bottom: -6px;
   z-index: -1;
 }
+.my-grid{
+  display:grid;
+  justify-items: center;
+  gap: 0.5rem;
+ grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 768px) {
+  .my-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 420px) {
+  .my-grid{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+

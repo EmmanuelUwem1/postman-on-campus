@@ -18,7 +18,7 @@ const BePart: React.FC<BePartProps> = ({ showSecondaryCTA }) => {
       <div
         className={`flex ${
           !showSecondaryCTA ? "flex-col-reverse" : "flex-row"
-        } flex-wrap justify-center items-center gap-4`}
+        } flex-wrap justify-center items-center max-sm:gap-2 gap-4`}
       >
         <Link
           href={"/resources"}

@@ -41,7 +41,7 @@ export default function Home() {
             using Postman to streamline API development, testing, and
             collaboration.
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-4">
+          <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4">
             <Link
               href={"https://chat.whatsapp.com/CpY15kWfa6N99YLfu7GObm"}
               className=" font-semibold text-lg md:text-2xl cta-button-pri px-6 py-3 rounded-lg flex w-full sm:w-fit mx-4 sm:mx-0 items-center justify-center"
@@ -126,7 +126,7 @@ export default function Home() {
         <h3 className="text-[#000000] text-2xl md:text-4xl font-normal py-3">
           Everything You Need to Succeed with APIs
         </h3>
-        <div className="flex flex-wrap gap-4 items-center justify-center w-full   my-8">
+        <div className="flex flex-wrap gap-4 items-center justify-center w-full my-8">
           {featuresData.map((feature, index) => (
             <div
               key={index}
@@ -150,7 +150,7 @@ export default function Home() {
         <h3 className="text-[#000000] text-2xl md:text-4xl font-normal py-3">
           Grow Your Skills, Expand Your Network, and Have Fun!
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex-wrap lg:flex gap-4 items-center justify-center w-full my-8">
+        <div className="my-grid gap-4 items-center justify-center w-full my-8">
           {Events.slice(0, 3).map((event) => (
             <EventCard
               key={event.id}

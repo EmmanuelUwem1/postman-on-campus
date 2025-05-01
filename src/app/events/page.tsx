@@ -18,7 +18,6 @@ function EventPage() {
               layout="fill"
               objectFit="cover"
               objectPosition="center"
-              // className="rounded-[7px]"
             />
           </span>
           <div className="flex flex-col justify-center items-start gap-6 w-full md:w-[65%]">
@@ -38,7 +37,7 @@ function EventPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex-wrap lg:flex gap-4 items-center justify-center w-full my-8">
+        <div className="my-grid grid gap-4 items-center justify-center w-full my-8">
           {Events.map((event) => (
             <EventCard
               key={event.id}
